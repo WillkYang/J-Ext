@@ -1,0 +1,27 @@
+{
+	"manifest_version":2,
+	"name":"简书扩展",
+	"description":"jianshu extension",
+	"version":"0.1",
+	"permissions":[
+		"tabs",
+		"http://www.jiansh.com/",
+		"activeTab"
+	],
+	// "background": {
+		// "scripts":["bg.js"],
+		// "persistent":false
+	// },
+	"browser_action":{
+    	"default_icon":"icon.png"
+    },
+	"icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [
+    {
+      "matches": ["http://www.jianshu.com/*"],
+      "js": ["jianshu.js"]
+    }
+  ]
+}
